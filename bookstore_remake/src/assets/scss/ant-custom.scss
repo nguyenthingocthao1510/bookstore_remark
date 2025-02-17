@@ -1,0 +1,391 @@
+.ant-card-body {
+  padding: 6px 8px !important;
+}
+.ant-card-head {
+  padding: 2px 12px !important;
+  min-height: fit-content !important;
+  border-bottom: none !important;
+}
+.crop-image-modal-wrapper {
+  z-index: 1600 !important;
+}
+.table-custom {
+  .ant-table-cell {
+    padding: 6px !important;
+  }
+}
+
+
+.ant-modal-content {
+  padding: 14px 16px !important;
+  .ant-modal-header .ant-modal-title {
+    .ant-typography {
+      margin: 0 !important;
+    }
+  }
+  .ant-modal-footer {
+    margin-top: 0 !important;
+  }
+}
+.table-custom-visible-columns-checkbox-group {
+  span {
+    font-weight: 400 !important;
+  }
+}
+.ant-btn {
+  padding: 5px 10px !important;
+}
+
+.ScanButton button {
+  margin: 26px 0px 0px 118px !important;
+  // padding: 10px 31px !important;
+  width: 61% !important;
+}
+//---------------- total form ----------------
+
+.ListPatient {
+  input {
+    height: 26px !important;
+  }
+  .genderPatient .ant-select {
+    height: 29px !important;
+  }
+}
+
+.admissionSubject .ant-form-item-row {
+  padding-top: 0px !important;
+}
+
+.fullNamePatient input {
+  border-radius: 5px 0 0 5px !important;
+  border-right: none !important;
+}
+
+.insuranceCardNumber input {
+  border-left: none;
+  border-radius: 0 5px 5px 0 !important;
+}
+
+// registration
+.registration {
+  .ant-select-selector,
+  .ant-picker,
+  .ant-select {
+    height: 26px !important;
+  }
+
+  input {
+    height: 26px !important;
+  }
+
+  .CardTr676asfer {
+    .ant-table-cell {
+      padding: 0 !important;
+    }
+  }
+  .segmented {
+    .ant-segmented {
+      padding: 0px !important;
+      color: var(--bs-topbar-bg) !important;
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+      :hover {
+        background-color: none !important;
+        color: var(--bs-topbar-bg) !important;
+      }
+    }
+
+    .ant-segmented-group {
+      background-color: #fff !important;
+      border: 2px solid var(--bs-topbar-bg) !important;
+      border-radius: 7px;
+      transition: border-color 0.3s ease;
+    }
+
+    .ant-segmented-item-selected {
+      background-color: var(--bs-topbar-bg) !important;
+      color: white !important;
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+      :hover {
+        color: white !important;
+      }
+    }
+    .ant-select-single.ant-select-sm {
+      font-size: 12px;
+      height: 25px !important;
+    }
+    .ant-select-selector {
+      padding: 2px 7px !important;
+      background: none !important;
+      border: none !important;
+    }
+    .ant-select-dropdown
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      color: #0000 !important;
+      font-weight: 600;
+      background-color: none !important;
+    }
+    .ant-select .ant-select-arrow {
+      color: black !important;
+    }
+    .ant-select
+      .ant-select-sm
+      .ant-select-outlined
+      .ant-select-in-form-item
+      .ant-select-auto-complete {
+      margin-bottom: 3px !important;
+    }
+  }
+
+  .icdCode {
+    margin-bottom: 3px !important;
+  }
+
+  .icdNameV {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+// service catelog
+.service_detail {
+  .fromDate {
+    padding-left: 77px !important;
+  }
+  .isDeleted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .servicePrice {
+    padding-left: 18px !important;
+  }
+  .serviceName {
+    padding-left: 10px !important;
+  }
+  .serviceCode {
+    padding-left: 85px !important;
+  }
+  .serviceTypeName {
+    padding-left: 10px !important;
+  }
+  .unitOfMeasure {
+    padding-left: 56px !important;
+  }
+  .surgicalProcedureType {
+    padding-left: 7px !important;
+  }
+  .facility {
+    padding-left: 45px !important;
+  }
+  .healthInsuranceServiceGroup {
+    padding-left: 7px !important;
+  }
+}
+// acceptOutputPatient
+.accepted_output_patient {
+  .Pulse,
+  .SPO2 {
+    padding-left: 35px !important;
+  }
+  .Temperature {
+    padding-left: 11px !important;
+  }
+  .BloodPressure {
+    padding-left: 30px !important;
+  }
+  .RespirationRate {
+    padding-left: 15px !important;
+  }
+  .Weight {
+    padding-left: 26px !important;
+  }
+  .ReasonForExamination {
+    padding-left: 1px !important;
+  }
+  .Self {
+    padding-left: 16px !important;
+  }
+  .Family {
+    padding-left: 34px !important;
+  }
+  .FullBody {
+    padding-left: 17px !important;
+  }
+  .ant-card {
+    margin-bottom: 10px;
+  }
+}
+.consecutiveYears {
+  .ant-checkbox-wrapper {
+    justify-content: end !important;
+    align-items: center !important;
+  }
+}
+
+.ant-col {
+  height: unset !important;
+  .box-registration {
+    width: 100% !important;
+  }
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-number {
+  width: 100%;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+}
+.ant-btn {
+  border-radius: 4px !important;
+  font-size: 13px !important;
+}
+.ant-input {
+  padding: 1px 7px !important;
+}
+.auto_complete {
+  font-size: 12px !important;
+  padding: 4.46px 0px !important;
+}
+
+.table {
+  margin-bottom: 0px !important;
+  .ant-table-thead {
+    .ant-table-cell {
+      background-color: var(--bs-topbar-bg);
+      color: white !important;
+    }
+  }
+}
+.hiddenBr {
+  .ant-popover-arrow {
+    display: none !important;
+  }
+  .ant-popover-content {
+    .ant-popover-inner {
+      background-color: none !important;
+      padding: 0px !important;
+    }
+  }
+}
+
+.ant-form-item {
+  #fullNamePatient .ant-input-group-addon {
+    width: 0% !important;
+  }
+  #insuranceCardNumber .ant-input-group-addon {
+    width: 29% !important;
+  }
+  .ant-form-item-label {
+    label::after {
+      content: ' ' !important;
+      position: relative;
+      margin-block: 0;
+      margin-inline-start: 2px;
+      margin-inline-end: 8px;
+    }
+  }
+}
+
+.ant-form-item-row {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 12px !important;
+}
+
+.btn-sub-see-the-doctor {
+  margin-right: 8px;
+}
+
+.adjust-icd {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.icd_all_in {
+  .ant-list-bordered {
+    border: none !important;
+  }
+  .icdNameV {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .list_select {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+  }
+  .item_select {
+    transition: 0.5s;
+  }
+  .item_select:hover {
+    background: #f3f2f2;
+  }
+}
+.ant-popover {
+  .ant-popover-inner {
+    padding: 0px !important;
+  }
+  .ant-table-row {
+    text-align: center !important;
+    cursor: pointer;
+    .ant-table-cell {
+      padding: 2px 6px !important;
+    }
+  }
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  scrollbar-width: none;
+}
+.bold-label {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  margin-right: 4px;
+  display: inline-block;
+}
+.input-col {
+  width: 20%;
+  text-align: right;
+}
+.input-search-col {
+  width: 40%;
+}
+.col-content {
+  display: flex;
+  align-items: center;
+}
+
+.ant-pagination-options {
+  position: absolute;
+  right: 1%;
+}
+
+.ant-pagination-total-text{
+  right:88.5% !important;
+  position: absolute;
+}
+
+.ant-space  {
+  row-gap: 0px !important;
+}
+
+.ant-card {
+  margin-bottom: -1px !important;
+}
