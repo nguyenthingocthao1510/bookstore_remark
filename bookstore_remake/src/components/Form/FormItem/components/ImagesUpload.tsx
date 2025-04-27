@@ -4,7 +4,7 @@ interface Props {
 
 }
 
-export const index = (props: Props) => {
+export const ImagesUpload = (props: Props) => {
     return (
         <div>
 
