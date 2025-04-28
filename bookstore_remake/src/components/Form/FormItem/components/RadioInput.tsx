@@ -1,10 +1,11 @@
 import { Radio } from "antd";
+import { TOption } from "../../../../constants/types/common";
 
 type Props = {
     value: any,
     name: string,
     disabled?: boolean,
-    options: any,
+    options: TOption[],
     onChange?: (e: any) => void,
 };
 
