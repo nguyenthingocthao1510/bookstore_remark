@@ -1,9 +1,10 @@
 import { AutoComplete } from "antd";
+import { TOption } from "../../../../constants/types/common";
 
 type Props = {
     allowClear?: boolean,
     disabled?: boolean,
-    options?: any,
+    options: TOption[],
     placeholder?: string,
     size?: 'small' | 'middle' | 'large',
     value?: any,
@@ -53,7 +54,7 @@ const AutoCompleteInput = ({
     const isMultiple = mode === 'multiple' || selectMultiple;
     const arrayValue = isMultiple ? stringToArray(value) : value;
 
-    const defaultValue = isMultiple ? arrayValue : options.find((option: any) => option.value === value).value;
+    const defaultValue = isMultiple ? arrayValue : options.find((option: any) => option.value === value)?.value;
 
     const handleSelectedChange = (newValue: string | string[]) => {
         if (isMultiple) {

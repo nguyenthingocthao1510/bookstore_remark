@@ -9,6 +9,7 @@ import { DatePickerInput, RangePickerInput, WeekPickerInput } from "./components
 import { DATE_FORMAT } from "../../../constants/common/common";
 import AutoCompleteInput from "./components/AutoComplete";
 import './style.scss';
+import { TOption } from "../../../constants/types/common";
 
 export type InputProps = {
     name: string;
@@ -27,7 +28,7 @@ export type InputProps = {
     error?: string;
     touched?: boolean;
 
-    options?: any;
+    options?: TOption[];
     onChange?: (e: any, dateString?: any) => void;
     onBlur?: (e: any) => void;
     onKeyDown?: (e: any) => void;
@@ -255,8 +256,8 @@ const FormItem: React.FC<InputProps> = ({
                                 value={value}
                             >
                                 <Row>
-                                    {options?.map((item: any, index: any) => {
-                                        <Col key={item} span={item.span}>
+                                    {options?.map((item: any, index: any) => (
+                                        <Col key={index} span={item.span}>
                                             <Checkbox
                                                 checked={checked}
                                                 value={item.value}
@@ -267,7 +268,7 @@ const FormItem: React.FC<InputProps> = ({
                                                 {item.label}
                                             </Checkbox>
                                         </Col>
-                                    })}
+                                    ))}
                                 </Row>
                             </Checkbox.Group>
                         ) : (

@@ -1,11 +1,12 @@
 import { Select } from "antd";
+import { TOption } from "../../../../constants/types/common";
 
 type Props = {
     placeholder?: string;
     className?: string;
     suffixIcon?: any;
     onChange?: (e: any) => void;
-    options: any;
+    options: TOption[];
     value: any;
     name: string;
     disabled?: boolean;

@@ -1,9 +1,10 @@
 import { Checkbox, Col, Row } from "antd"
+import { TOption } from "../../../../constants/types/common";
 
 type Props = {
     value: any,
     disabled?: boolean;
-    options?: any;
+    options?: TOption[];
     onChange: (e: any) => void;
 }
 
