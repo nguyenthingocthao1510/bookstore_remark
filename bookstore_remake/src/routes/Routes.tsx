@@ -1,14 +1,10 @@
 import React from 'react'
 
-interface IRoutesProps {
 
-}
-
-const AllRoutes = (props: IRoutesProps) => {
+const AllRoutes = () => {
     // const {appSelector , dispatch} = useRedux
     return (
         <div>
-
         </div>
     )
 }
