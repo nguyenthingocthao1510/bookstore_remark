@@ -1,5 +1,5 @@
-import { Card, Col, Grid, Layout, Row } from 'antd'
-import 'style.scss'
+// import { Card, Col, Grid, Layout, Row } from 'antd'
+// import './style.scss'
 
 // interface Props {
 
@@ -8,7 +8,8 @@ import 'style.scss'
 export const Login = () => {
     return (
         <>
-            <Layout>
+            <p>Login page</p>
+            {/* <Layout>
                 <Row gutter={[16, 16]}>
                     <Col span={12}>
                         <img src=''></img>
@@ -17,7 +18,7 @@ export const Login = () => {
 
                     </Col>
                 </Row>
-            </Layout>
+            </Layout> */}
         </>
     )
 }
