@@ -4,9 +4,16 @@ import { ChangeEvent } from 'react';
 const yubObject = (object: any) => Yup.object().shape(object);
 const yubArray = (object: any) => Yup.array().of(object);
 
-const isPhoneNumber = Yup.string().required('Please enter phone number').matches(
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/, 'Must be only digits and 10 characters'
-).min(0, 'Not valid phone number').max(11, 'Not a valid phone number').nullable();
+const isPhoneNumber = Yup.string()
+  .required("Please enter phone number")
+  .matches(
+    /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/,
+    "Must be only digits and 10 characters"
+  )
+  .min(10, "Must be at least 10 characters")
+  .max(11, "Not a valid phone number")
+  .nullable();
+
 
 const isCCCD = Yup.string().required().matches(/^\d{9}$|^\d{12}$/, 'Must be only number').min(9, 'Too short').max(12, 'Too long').nullable();
 

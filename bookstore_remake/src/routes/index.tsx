@@ -1,5 +1,5 @@
 import { Route, RouteProps } from "react-router-dom";
-import { Login } from "src/pages/loginPage";
+import { LoginPage } from "src/pages/loginPage";
 import { Root } from "./Root";
 
 export interface RoutesProps {
@@ -27,7 +27,7 @@ const publicRoute: RoutesProps[] = [
         path: '/login',
         exact: true,
         name: 'Login',
-        element: <Login />,
+        element: <LoginPage />,
         route: Route
     }
 ]
