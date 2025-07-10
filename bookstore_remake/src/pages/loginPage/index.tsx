@@ -21,7 +21,7 @@ import { useFormik } from "formik";
 
 type IconPosition = "start" | "end";
 
-interface IconProp {
+export interface IconProp {
   label: string;
   icon: React.ElementType;
   position: IconPosition;
@@ -114,7 +114,7 @@ export const LoginPage = () => {
   const InputLoginForm: InputProps[] = [
     {
       name: "phone_number",
-      value: formValues["phone_number"],
+      value: formControl.values.phone_number,
       allowClear: true,
       type: TYPE_FIELD.TEXT,
       placeholder: "Phone number",
@@ -126,7 +126,7 @@ export const LoginPage = () => {
     },
     {
       name: "password",
-      value: formValues["password"],
+      value: formControl.values.password,
       allowClear: true,
       type: TYPE_FIELD.PASSWORD,
       placeholder: "Password",

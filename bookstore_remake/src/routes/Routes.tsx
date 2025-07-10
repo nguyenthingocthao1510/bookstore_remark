@@ -1,50 +1,53 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router';
-import { publicRoute } from '.';
-import DefaultLayout from 'src/layouts/Default';
-import useRedux from 'src/hooks/useRedux';
-import Error404 from 'src/pages/error/Error404';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
+import { publicRoute, RoutesProps } from ".";
+import DefaultLayout from "src/layouts/Default";
+import useRedux from "src/hooks/useRedux";
+import Error404 from "src/pages/error/Error404";
+import React from "react";
 
 const AllRoutes = () => {
-    const { appSelector, dispatch } = useRedux();
-    // const { layout } = appSelector(state => ({
-    // layout: state.Layout, 
-    // }));
+  const { appSelector } = useRedux();
 
-    // const { width } = useViewport();
+  const { layout } = appSelector((state) => ({
+    layout: state.layout,
+  }));
 
-    const { layout } = appSelector(state => ({
-        layout: state.layout
-    }))
+  const renderRoute = (routes: RoutesProps[]): React.ReactNode[] => {
+    return routes.map((route, index) => {
+      const { path, element, children } = route;
 
-    const getLayout = () => {
-        // let layoutCls = TwoColumnLayout();
-    }
-    const router = createBrowserRouter(
-        createRoutesFromElements(
-            <Route>
-                <Route>
-                    {publicRoute.map((route, index) => (
-                        <Route
-                            path={route.path}
-                            element={
-                                <DefaultLayout layout={layout}>
-                                    {route.element}
-                                </DefaultLayout>
-                            }
-                            key={index}
-                        >
-                        </Route>
-                    ))}
-                </Route>
-                <Route path='*' element={<Error404 />} />
-            </Route>
-        )
+      if (!path) {
+        console.warn(`Route at index ${index} is missing a 'path'`);
+      }
+
+      return (
+        <Route
+          path={path}
+          element={<DefaultLayout layout={layout}>{element}</DefaultLayout>}
+          key={index}
+        >
+          {children && renderRoute(children)}
+        </Route>
+      );
+    });
+  };
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        {renderRoute(publicRoute)}
+        <Route path="*" element={<Error404 />} />
+      </Route>
     )
+  );
 
-    return (
-        <RouterProvider router={router}></RouterProvider>
-    )
-}
+  return <RouterProvider router={router} />;
+};
 
 export default AllRoutes;
