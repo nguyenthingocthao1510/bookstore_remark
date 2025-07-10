@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App h-full">
       <ErrorBoundary>
-        <AllRoutes></AllRoutes>
+        <AllRoutes />
       </ErrorBoundary>
     </div>
   );
