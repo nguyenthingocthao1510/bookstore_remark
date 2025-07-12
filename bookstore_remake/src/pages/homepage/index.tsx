@@ -1,13 +1,18 @@
-import React from 'react'
+import { Layout } from "antd";
+import { HeaderComponent } from "./component/header";
+import { FooterComponent } from "./component/footer";
+import React from "react";
 
-interface Props {
+type Props = {
+  children: React.ReactNode;
+};
 
-}
-
-export const Homepage = (props: Props) => {
-    return (
-        <div>
-
-        </div>
-    )
-}
+export const MainLayout = ({ children }: Props) => {
+  return (
+    <Layout className="w-full h-full">
+      <HeaderComponent />
+      <div className="flex-1">{children}</div>
+      <FooterComponent />
+    </Layout>
+  );
+};

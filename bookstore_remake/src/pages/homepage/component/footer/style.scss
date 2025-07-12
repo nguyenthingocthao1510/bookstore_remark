@@ -1,0 +1,91 @@
+/* Footer Buttons Styling for Sections */
+.service-cpn a,
+.support-cpn a,
+.account-cpn a {
+    background: transparent !important;
+    color: #bd7c89 !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-self: flex-start !important;
+    padding-left: 0 !important;
+}
+
+.service-cpn a:hover,
+.support-cpn a:hover,
+.account-cpn a:hover {
+    background: #fdd7de !important;
+    color: red !important;
+}
+
+/* Title Buttons (e.g., SERVICE, SUPPORT) */
+.service-btn,
+.support-btn,
+.account-btn,
+.contact-btn,
+.payment-btn {
+    background: linear-gradient(to right, #f97892, #fbaebe) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.service-btn:hover,
+.support-btn:hover,
+.account-btn:hover,
+.contact-btn:hover,
+.payment-btn:hover {
+    background: linear-gradient(to right, #dc2626, #fecaca) !important;
+    color: white !important;
+}
+
+/* Contact Section Buttons */
+.contact-cpn a {
+    color: #fba1b3 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    align-self: flex-start !important;
+    padding-left: 0 !important;
+}
+
+/* Payment Icons */
+.icons-cpn button {
+    background: #fba1b3 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 200% !important;
+    height: 200% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.icons-cpn svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+/* Social Media Icons */
+.social-cpn a {
+    width: 200% !important;
+    height: 200% !important;
+    margin-right: 1rem !important;
+    background: #fba1b3 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.social-cpn svg {
+    padding-top: 0.25rem;
+    width: 24px !important;
+    height: 24px !important;
+}
