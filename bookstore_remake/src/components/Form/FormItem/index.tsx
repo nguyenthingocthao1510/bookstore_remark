@@ -252,6 +252,8 @@ const FormItem: React.FC<InputProps> = ({
               onChange={onChange}
               options={options ?? []}
               onClick={onClick}
+              suffixIcon={suffixIcon}
+              style={style}
             ></AutoCompleteInput>
           </div>
         );

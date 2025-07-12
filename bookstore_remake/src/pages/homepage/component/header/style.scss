@@ -1,0 +1,27 @@
+#search .ant-select-selector {
+ border-radius: 18px;
+}
+
+.custom-menu .ant-menu-item{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.custom-menu .ant-menu-item:hover {
+  background: #fca5a5 !important;
+  color: white !important; 
+}
+
+.custom-menu .ant-menu-item:hover::after {
+  border-bottom-color: transparent !important;
+}
+
+.custom-menu .ant-menu-item:where(.ant-menu-item-selected) {
+    background: #fca5a5 !important;
+    color: white !important; 
+    font-weight: 600;
+}
+
+.custom-menu .ant-menu-item:where(.ant-menu-item-selected)::after {
+  border-bottom-color: transparent !important;
+}
