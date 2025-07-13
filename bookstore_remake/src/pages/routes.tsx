@@ -8,27 +8,45 @@ import { RegisterPage } from "./registerPage";
 import { CartPage } from "./cart";
 import { AccountPage } from "./account";
 import { HomepagePage } from "./homepage/component";
+import { RoutesProps } from "src/routes";
+import { MainLayout } from "./homepage";
 
-const bookstoreRoute = [
+const bookstoreRoute: RoutesProps[] = [
   {
     path: homePageRoute,
     name: "Homepage",
-    element: <HomepagePage />,
+    element: (
+      <MainLayout>
+        <HomepagePage />
+      </MainLayout>
+    ),
   },
   {
     path: registerRoute,
     name: "Register",
-    element: <RegisterPage />,
+    element: (
+      <MainLayout>
+        <RegisterPage />
+      </MainLayout>
+    ),
   },
   {
     path: cartRoute,
     name: "Cart",
-    element: <CartPage />,
+    element: (
+      <MainLayout>
+        <CartPage />
+      </MainLayout>
+    ),
   },
   {
     path: accountRoute,
     name: "Account",
-    element: <AccountPage />,
+    element: (
+      <MainLayout>
+        <AccountPage />
+      </MainLayout>
+    ),
   },
 ];
 
