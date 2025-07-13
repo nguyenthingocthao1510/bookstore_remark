@@ -1,0 +1,49 @@
+.background-bookstore{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.advertise-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-cpn .slick-prev{
+  background: red !important;
+  width: 2%;
+  height: 7%;
+  border-radius: 50%;
+  margin-left: -3%;
+}
+
+.carousel-cpn .slick-next {
+  background: red !important;
+  width: 2%;
+  height: 7%;
+  border-radius: 50%;
+  margin-right: -3%;
+}
+
+.carousel-cpn .slick-prev::after {
+  top: 32%;
+  left: 40%;
+}
+
+.carousel-cpn .slick-next {
+  right: 1%;
+}
+
+.carousel-cpn .slick-next::after {
+  top: 34%;
+  left: 23.5%;
+}
+
+/* Customize arrow icon */
+.carousel-cpn .slick-prev::before,
+.carousel-cpn .slick-next::before {
+  color: white;
+}
+

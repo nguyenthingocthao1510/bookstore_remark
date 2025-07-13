@@ -10,6 +10,9 @@ import DefaultLayout from "src/layouts/Default";
 import useRedux from "src/hooks/useRedux";
 import Error404 from "src/pages/error/Error404";
 import React from "react";
+import bookstoreRoute from "src/pages/routes";
+import { HeaderComponent } from "src/pages/homepage/component/header";
+import { FooterComponent } from "src/pages/homepage/component/footer";
 
 const AllRoutes = () => {
   const { appSelector } = useRedux();
