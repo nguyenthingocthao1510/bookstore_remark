@@ -1,0 +1,40 @@
+.shipping-detail-cpn #name div,
+.shipping-detail-cpn #phone_number div,
+.shipping-detail-cpn #city div,
+.shipping-detail-cpn #order_id div,
+.shipping-detail-cpn #district div,
+.shipping-detail-cpn #ward div{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.shipping-detail-cpn #phone_number .phone_number::before,
+.shipping-detail-cpn #phone_number .phone_number::after
+{
+    content: '';
+    display: none !important;
+}
+
+.shipping-detail-cpn #phone_number .phone_number{
+    border: unset;
+    width: 23%;
+}
+
+
+.shipping-detail-cpn #order_id .order_id{
+    border: unset;
+    width: 13%;
+}
+
+.shipping-detail-cpn label {
+    color: #BD7C89;
+    font-weight: 500 !important;
+    font-size: large;
+}
+
+.shipping-detail-cpn .ant-form-item-explain-error{
+    display: flex;
+    justify-content: flex-end;
+}
