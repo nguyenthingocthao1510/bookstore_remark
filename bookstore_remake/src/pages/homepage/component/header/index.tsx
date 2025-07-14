@@ -8,7 +8,7 @@ import { AutoComplete, Menu, MenuProps } from "antd";
 import { Header } from "antd/es/layout/layout";
 import MenuItem from "antd/es/menu/MenuItem";
 import React, { ChangeEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BookStoreLogo } from "src/assets/icons";
 import { InputProps } from "src/components/Form/FormItem";
 import InputFields from "src/components/Form/FormItem/InputFields";
@@ -22,6 +22,8 @@ export const HeaderComponent = () => {
   const [formValues, setFormValues] = useState<Record<string, string>>({});
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname.split("/")[1];
 
   const items: MenuItem[] = [
     {
@@ -98,7 +100,7 @@ export const HeaderComponent = () => {
           className="custom-menu"
           theme="light"
           mode="horizontal"
-          defaultSelectedKeys={[String(items[0]?.key)]}
+          defaultSelectedKeys={[currentPath]}
           items={items}
           style={{ flex: 1, minWidth: 0 }}
           onClick={handleClick}
