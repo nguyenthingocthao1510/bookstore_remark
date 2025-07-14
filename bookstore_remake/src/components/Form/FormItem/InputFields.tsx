@@ -17,6 +17,8 @@ type Props = Omit<FormProps, "form"> & {
   gutter?: [number, number];
   isHorizontal?: boolean;
   onKeyDown?: (e: any) => void;
+  col?: number;
+  row?: number;
 };
 
 const InputFields: React.FC<Props> = React.memo(

@@ -2,6 +2,7 @@ import { HeartOutlined, MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Carousel, Modal } from "antd";
 import { useState } from "react";
 import { useBookDetail } from "src/helpers/api/books";
+import { formatPrice } from "src/utils/formatPrice";
 
 type Prop = {
   isModalOpen?: boolean;
@@ -13,15 +14,6 @@ type Prop = {
 export const ProductModal = (props: Prop) => {
   const { data } = useBookDetail(props.bookId);
   const [bookNumber, setBookNumber] = useState<number>(1);
-
-  const formatPrice = (amount: number, currency?: string) => {
-    const currentDefault = currency ?? "VND"; // fallback to VND
-    return new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: currentDefault,
-      maximumFractionDigits: currentDefault === "VND" ? 0 : 2,
-    }).format(amount);
-  };
 
   const handleIncrease = () => {
     setBookNumber(bookNumber + 1);

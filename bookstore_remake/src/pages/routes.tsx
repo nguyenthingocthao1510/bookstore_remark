@@ -22,15 +22,6 @@ const bookstoreRoute: RoutesProps[] = [
     ),
   },
   {
-    path: registerRoute,
-    name: "Register",
-    element: (
-      <MainLayout>
-        <RegisterPage />
-      </MainLayout>
-    ),
-  },
-  {
     path: cartRoute,
     name: "Cart",
     element: (
