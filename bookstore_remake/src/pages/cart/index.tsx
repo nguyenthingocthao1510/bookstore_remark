@@ -113,7 +113,7 @@ export const CartPage = () => {
           description: "Your payment was processed successfully.",
         });
         setTimeout(() => {
-          navigate("/homepage");
+          navigate("/purchase-success");
         }, 2000);
       } catch (error) {
         api["error"]({

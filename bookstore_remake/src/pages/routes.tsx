@@ -1,12 +1,13 @@
 import {
   accountRoute,
+  bookDetailRoute,
   cartRoute,
   changePasswordRoute,
   homePageRoute,
   logoutRoute,
   myCoinRoute,
+  processSuccessRoute,
   profileRoute,
-  registerRoute,
 } from "src/routes/routes.contants";
 import { RegisterPage } from "./registerPage";
 import { CartPage } from "./cart";
@@ -20,6 +21,8 @@ import { Navigate } from "react-router-dom";
 import { ChangePasswordPage } from "./account/changePassword";
 import { MyCoinPage } from "./account/myCoin";
 import { LogoutPage } from "./account/logout";
+import { BookDetailPage } from "./bookDetail";
+import { ProcessSuccessPage } from "./processSuccess";
 
 const bookstoreRoute: RoutesProps[] = [
   {
@@ -88,6 +91,24 @@ const bookstoreRoute: RoutesProps[] = [
         ),
       },
     ],
+  },
+  {
+    path: bookDetailRoute,
+    name: "Book detail",
+    element: (
+      <MainLayout>
+        <BookDetailPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: processSuccessRoute,
+    name: "Process Success",
+    element: (
+      <MainLayout>
+        <ProcessSuccessPage />
+      </MainLayout>
+    ),
   },
 ];
 
