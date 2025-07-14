@@ -1,0 +1,38 @@
+.thank-you-container {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 100px); // adjust to fit Ant Layout
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.thank-you-content {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.thank-you-title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.thank-you-subtitle {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.thank-you-success {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.thank-you-note {
+  font-size: 1.2rem;
+}

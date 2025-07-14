@@ -6,6 +6,7 @@ import { useBook } from "src/helpers/api/books";
 import { useState } from "react";
 import { ProductModal } from "./productModal";
 import { formatPrice } from "src/utils/formatPrice";
+import { useNavigate } from "react-router-dom";
 
 const contentStyle: React.CSSProperties = {
   height: "160px",
@@ -18,6 +19,8 @@ export const HomepagePage = () => {
   const { data, isLoading } = useBook();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedBook, setSelectedBook] = useState<string | undefined>();
+
+  const navigate = useNavigate();
 
   const showModal = (value?: string) => {
     setIsModalOpen(true);
@@ -91,7 +94,17 @@ export const HomepagePage = () => {
 
                       {/* Title + Price */}
                       <div className="mt-2">
-                        <p className="truncate text-lg font-light text-[#BD7C89]">
+                        <p
+                          className="truncate text-lg font-light text-[#BD7C89] cursor-pointer hover:!text-red-500"
+                          onClick={(e) => {
+                            const url = `/book/${books.id}`;
+                            if (e.ctrlKey || e.metaKey) {
+                              window.open(url, "_blank");
+                            } else {
+                              navigate(url);
+                            }
+                          }}
+                        >
                           {books.volumeInfo?.title}
                         </p>
                         <p className="text-lg text-red-500">
@@ -158,7 +171,17 @@ export const HomepagePage = () => {
 
                       {/* Title + Price */}
                       <div className="mt-2">
-                        <p className="truncate text-lg font-light text-[#BD7C89]">
+                        <p
+                          className="truncate text-lg font-light text-[#BD7C89] cursor-pointer hover:!text-red-500"
+                          onClick={(e) => {
+                            const url = `/book/${books.id}`;
+                            if (e.ctrlKey || e.metaKey) {
+                              window.open(url, "_blank");
+                            } else {
+                              navigate(url);
+                            }
+                          }}
+                        >
                           {books.volumeInfo?.title}
                         </p>
                         <p className="text-lg text-red-500">
@@ -225,7 +248,17 @@ export const HomepagePage = () => {
 
                       {/* Title + Price */}
                       <div className="mt-2">
-                        <p className="truncate text-lg font-light text-[#BD7C89]">
+                        <p
+                          className="truncate text-lg font-light text-[#BD7C89] cursor-pointer hover:!text-red-500"
+                          onClick={(e) => {
+                            const url = `/book/${books.id}`;
+                            if (e.ctrlKey || e.metaKey) {
+                              window.open(url, "_blank");
+                            } else {
+                              navigate(url);
+                            }
+                          }}
+                        >
                           {books.volumeInfo?.title}
                         </p>
                         <p className="text-lg text-red-500">

@@ -8,7 +8,8 @@ export const profileRoute = 'profile';
 export const changePasswordRoute = 'change-password';
 export const myCoinRoute = 'my-coin';
 export const logoutRoute = 'logout';
-
+export const bookDetailRoute = '/book/:bookId';
+export const processSuccessRoute = '/purchase-success';
 
 
 
