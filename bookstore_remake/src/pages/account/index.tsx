@@ -1,11 +1,9 @@
 import React from "react";
 
-interface Props {}
+type Props = {
+  children: React.ReactNode;
+};
 
-export const AccountPage = (props: Props) => {
-  return (
-    <div>
-      <p>Account page</p>
-    </div>
-  );
+export const AccountLayout = ({ children }: Props) => {
+  return <div className="flex-1 bg-white">{children}</div>;
 };

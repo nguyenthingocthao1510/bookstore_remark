@@ -1,15 +1,25 @@
 import {
   accountRoute,
   cartRoute,
+  changePasswordRoute,
   homePageRoute,
+  logoutRoute,
+  myCoinRoute,
+  profileRoute,
   registerRoute,
 } from "src/routes/routes.contants";
 import { RegisterPage } from "./registerPage";
 import { CartPage } from "./cart";
-import { AccountPage } from "./account";
+import { AccountLayout } from "./account";
 import { HomepagePage } from "./homepage/component";
 import { RoutesProps } from "src/routes";
 import { MainLayout } from "./homepage";
+import { ProfilePage } from "./account/profile";
+import { AccountPage } from "./account/accountPage";
+import { Navigate } from "react-router-dom";
+import { ChangePasswordPage } from "./account/changePassword";
+import { MyCoinPage } from "./account/myCoin";
+import { LogoutPage } from "./account/logout";
 
 const bookstoreRoute: RoutesProps[] = [
   {
@@ -35,9 +45,49 @@ const bookstoreRoute: RoutesProps[] = [
     name: "Account",
     element: (
       <MainLayout>
-        <AccountPage />
+        <AccountLayout>
+          <AccountPage />
+        </AccountLayout>
       </MainLayout>
     ),
+    children: [
+      {
+        path: profileRoute,
+        name: "Profile",
+        element: (
+          <AccountLayout>
+            <ProfilePage />
+          </AccountLayout>
+        ),
+      },
+      {
+        path: changePasswordRoute,
+        name: "Change password",
+        element: (
+          <AccountLayout>
+            <ChangePasswordPage />
+          </AccountLayout>
+        ),
+      },
+      {
+        path: myCoinRoute,
+        name: "My coin",
+        element: (
+          <AccountLayout>
+            <MyCoinPage />
+          </AccountLayout>
+        ),
+      },
+      {
+        path: logoutRoute,
+        name: "Logout",
+        element: (
+          <AccountLayout>
+            <LogoutPage />
+          </AccountLayout>
+        ),
+      },
+    ],
   },
 ];
 
